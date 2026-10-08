@@ -1,0 +1,58 @@
+{
+  "name": "sea-sky-radar",
+  "version": "1.0.0",
+  "description": "船舶 + 飞机 海空雷达桌面挂件",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --mac"
+  },
+  "author": "liguanghui",
+  "license": "MIT",
+  "build": {
+    "appId": "com.liguanghui.seaskyradar",
+    "productName": "海空雷达",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.utilities",
+      "icon": "assets/icon.icns"
+    },
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": false,
+      "artifactName": "sea-sky-radar-setup-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "sea-sky-radar-${version}-portable.${ext}"
+    }
+  }
+}

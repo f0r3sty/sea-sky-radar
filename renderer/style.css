@@ -1,0 +1,29 @@
+* { box-sizing:border-box; margin:0; -webkit-user-select:none; user-select:none; }
+html,body { width:420px; height:292px; background:transparent; font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif; overflow:hidden; }
+.card { position:absolute; inset:0; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,.1); }
+#map { width:100%; height:100%; }
+#map .leaflet-control-attribution { display:none; }
+
+.topbar { position:absolute; top:0; left:0; right:0; z-index:400; display:flex; align-items:center; gap:8px;
+  padding:8px 10px 12px; background:linear-gradient(180deg,rgba(3,6,12,.78),rgba(3,6,12,0)); }
+.title { font-size:13px; font-weight:700; color:#fff; text-shadow:0 1px 4px rgba(0,0,0,.8); }
+.counts { font-size:11px; color:#cfe0ff; text-shadow:0 1px 4px rgba(0,0,0,.9); background:rgba(0,0,0,.35); border-radius:6px; padding:2px 7px; }
+.spacer { flex:1; }
+.icon { -webkit-app-region:no-drag; border:none; background:rgba(0,0,0,.35); color:#e9ecf1; font-size:11px;
+  width:22px;height:22px;border-radius:6px;cursor:pointer; }
+.icon:hover { background:rgba(34,211,238,.45); }
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background:#0b1526; color:#e9ecf1; }
+.leaflet-popup-content { font-size:11px; line-height:1.6; }
+.leaflet-popup-content b { color:#57d7ea; }
+.leaflet-popup-content a { color:#8ab4ff; background:rgba(56,132,255,.2); border-radius:5px; padding:1px 6px; text-decoration:none; font-size:10.5px; float:left; margin-top:3px; }
+
+.ship-ico { background:transparent; border:none; }
+.ship-ico .ship { position:absolute; inset:0; }
+.ship-ico .ship svg { width:100%; height:100%; filter:drop-shadow(0 0 1.5px rgba(0,0,0,.85)); }
+
+.stats { position:absolute; left:8px; right:8px; bottom:7px; z-index:400; display:flex; align-items:center; gap:7px;
+  background:rgba(3,8,16,.72); border-radius:8px; padding:3px 8px; font-size:8.5px; color:#d6e2f5; backdrop-filter:blur(6px); }
+.stats .lg { display:inline-flex; align-items:center; gap:3px; color:#b8c6dd; }
+.stats .dot { width:6px; height:6px; border-radius:50%; display:inline-block; }
+.stats .hl { margin-left:auto; color:#6fdcee; }

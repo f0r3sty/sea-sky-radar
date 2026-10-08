@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'" />
+  <title>海空雷达</title>
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card"><div id="map"></div></div>
+
+  <div class="topbar">
+    <span class="title">⛴ 船舶雷达</span>
+    <span id="counts" class="counts">⛴ —</span>
+    <div class="spacer"></div>
+    <button id="pin" class="icon">📍</button>
+    <button id="close" class="icon" title="关闭">✕</button>
+  </div>
+  <div id="stats" class="stats"></div>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>
